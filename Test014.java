@@ -61,7 +61,9 @@ public class Test014
 		nEng = Integer.parseInt(strTemp);
 
 		//- 사용자에게 안내 메세지 출력(수학점수)
-		System.out.print
+		System.out.print("수학 점수 입력:");
+
+
 	
 
 
