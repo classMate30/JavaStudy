@@ -1,10 +1,20 @@
+import java.io.IOException;
 public class Test001
 {
-	public static void main(String[] args)
+	public static void main(String[] args) throws IOException
 	{
-		System.out.println("Welcome to Java");
-		System.out.println("First Java Program");
+		char temp,temp1;
+		System.out.print("한 문자 입력 : ");
+		temp = (char)System.in.read();
+		//대문자이냐? 소문자로변환 : (소문자 이느냐 ? 대문자로변환 : 있는그대로)
+		temp1 = (temp >= 65 && temp <= 90) ? (char)(temp+32) : ((temp >= 97 && temp <=122) ? (char)(temp-32): temp);
+	
+		System.out.println(temp+ "→" +temp1);
 
+		
+		
+		//System.out.println("Welcome to Java");
+		//System.out.println("First Java Program");
 	}
 }
 

@@ -44,8 +44,9 @@ public class Test028
 		/*
 		n이 0보다 크다	→ true		→n은 양수
 						→ false		→n이 0보다 작다		→	true	→n 은 음수	
-														→	false	→n 은 영
-		*/
+																→	false	→n 은 영
+		
+		*/	
 
 		strResult = (n > 0) ? ("양수") :((n < 0) ? "음수" : "영");
 
