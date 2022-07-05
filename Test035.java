@@ -18,10 +18,56 @@
 //	  단, 입력은 BufferedReader를 활용하고,
 //	  if 조건문을 활용하여 연산을 수행할 수 있도록 한다.
 
+//4의배수 366
+//100의배수 365
+//400의 배수 366
+
+// 실행 예)
+//임의의 연도 입력 : 2000
+// 2000 → 윤년
+//계속하려면 아무 키나 누르세요...
+
+//임의의 연도 입력 : 2012
+// 2012 → 윤년
+//계속하려면 아무 키나 누르세요...
+
+//임의의 연도 입력 : 2022
+// 2022 → 평년
+//계속하려면 아무 키나 누르세요...
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
 public class Test035
 {
-	public static void main(String[] args)
+	public static void main(String[] args) throws IOException
 	{
-		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int year;
+
+		System.out.print("임의의 연도 입력 : ");
+		year = Integer.parseInt(br.readLine());
+
+		if (year % 400 == 0)
+		{
+			System.out.printf("%d → 윤년%n", year);
+		}
+		else if (year % 100 == 0)
+		{
+			System.out.printf("%d → 평년%n", year);
+		}
+		else if (year % 4 == 0)
+		{
+			System.out.printf("%d → 윤년%n", year);
+		}
+		else if (year % 400 != 0 || year % 100 != 0 || year % 4 !=0)
+		{
+			System.out.printf("%d → 평년%n", year);
+		}
+		else 
+		{
+			System.out.printf("%d → 판정불가%n", year);
+		}
 	}
 }

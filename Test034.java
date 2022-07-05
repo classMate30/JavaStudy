@@ -58,6 +58,7 @@ public class Test034
 			System.out.println(n + " → 2의 배수");
 		}
 		else if (n%3==0)
+		{
 			System.out.println(n + " → 3의 배수");
 		}
 		else if (n%2 !=0 || n%3 !=0)
