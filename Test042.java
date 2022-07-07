@@ -22,7 +22,7 @@
 // 임의의 정수 입력(1~3) : 1
 // ★
 // 계속하려면 아무키나 누르세요...
-import java.io.BufferedReader;
+/*import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
@@ -35,7 +35,7 @@ public class Test042
 
 		System.out.print("임의의 정수 입력(1~3) : ");
 		n = Integer.parseInt(br.readLine());
-		/*
+
 		switch(n)
 		{
 			case 1: System.out.println("★");break;
@@ -44,7 +44,7 @@ public class Test042
 			default: System.out.println("입력오류~!!!"); // break;
 		}
 		//System.out.println("스위치 구문 종료");
-		*/
+
 		switch (n)
 		{
 			case 3: System.out.print("★");
@@ -57,9 +57,9 @@ public class Test042
 
 	}
 }
+*/
 
 
-/*
 import java.io.IOException;
 public class Test042
 {
@@ -73,12 +73,11 @@ public class Test042
 		
 		switch(num)
 		{
-		case 3: result = "★★★"; break;
-		case 2: result = "★★";
-		case 1: result = "★";
+		case 51: result = "★★★"; break;
+		case 50: result = "★★";
+		case 49: result = "★";
 		}
 
 		System.out.println(result);
 	}
 }
-*/
