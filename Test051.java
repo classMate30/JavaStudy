@@ -50,7 +50,7 @@ public class Test051
 			}
 			n++;
 		}
-		if (flag && num!=0)
+		if (flag && num!=1)
 			System.out.printf("%d → 소수\n",num);
 		else
 			System.out.printf("%d → 소수아님\n",num);
