@@ -1,0 +1,7 @@
+1. 글꼴
+2. java다운로드
+3. JavaStudy 만들기(workspace임)   작업파일          
+javahome(bin)경로지정 
+4. EditPlus 다운로드 
+ 백업파일 생성 체크 해제
+E
