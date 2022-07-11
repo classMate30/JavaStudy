@@ -40,7 +40,7 @@ public class Test052
 		su2 = Integer.parseInt(br.readLine());
 
 		//입력받은 두 수의 크기 비교 및 자리 바꿈
-		//즉, su1이 su2보다 큰 경우 두 수의 자리르 바꿀수 있도록 처리
+		//즉, su1이 su2보다 큰 경우 두 수의 자리를 바꿀수 있도록 처리
 		if (su1 > su2)
 		{
 			//자리바꿈

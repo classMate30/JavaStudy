@@ -1,0 +1,8 @@
+public static int factorial(int 2)
+{
+	if(n==1)
+		return 1;
+	else 
+		return 2 * factorial(1);
+
+}

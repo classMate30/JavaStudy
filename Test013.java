@@ -25,10 +25,10 @@
 //선생님이랑 같이 작성한 코드
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
+import java.io.IOException;
 public class Test013
 {
-	public static void main(String[] args)
+	public static void main(String[] args) throws IOException
 	{
 		//주요 변수 선언
 
@@ -103,5 +103,3 @@ public class Test013
 		System.out.printf("밑변이 %d,이며 , 높이가 %d인 삼각형의 넓이 : %.1f%n",a,b,c);
 */
 	
-	}
-}

@@ -73,7 +73,7 @@ public class Test051
 			{
 				//앗~ 난 너를 소수라 생각했는데...ㅠㅠㅠ
 				//넌...소수가 아니었어 
-				flag = false;
+				flag =  false;
 				break;			//-- 멈춘다(+그리고 빠져나간다.)
 								//	→break를 감싸는 가장 가까운 반복문
 			}
