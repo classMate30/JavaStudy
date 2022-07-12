@@ -35,17 +35,45 @@ public class CircleTest
 	{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		System.out.prin("반지름 입력 : ")
+		System.out.print("반지름 입력 : ");
 		r = Integer.parseInt(br.readLine());
 	}
 
 
 	//넓이 계산 기능 → 메소드 정의
-	
+	double calArea()
+	{
+		// 원의 넓이 = 반지름 * 반지름 * 3.141592
+		return r * r * PI;
+	}
+
+
 	//둘레 계산 기능 → 메소드 정의
+	double calLength()
+	{
+		// 원의 둘레 = 반지름 * 2 * 3.141592
+		double result;
+
+		result = r * 2 * PI;
+		
+		return result;
+	}
 
 	//결과 출력 기능 → 메소드 정의
-	
+	void print(double a, double l)
+	{
+
+		// >> 반지름이 xxx인 원의 
+		// >> 넓이 : xxxx.xx
+		// >> 둘레 : xxxx.xx
+
+		System.out.printf(">> 반지름이 %d인 원의\n", r);
+		System.out.printf(">> 넓이 : %f\n", a);
+		System.out.printf(">> 둘레 : %f\n", l);
+	}
+}
+
+
 	//반지름 값 받아오는 메소드 작성
 	/*void input() throws IOException
 	{
@@ -73,5 +101,4 @@ public class CircleTest
 		System.out.printf(">> 넓이 : %.2f%n", a);
 		System.out.printf(">> 둘레 : %.2f%n", l);
 		*/
-	}
-}
+	
