@@ -2,7 +2,7 @@ import java.io.IOException;
 public class Test001
 {
 	public static void main(String[] args) throws IOException
-	{
+	{	/*
 		char temp,temp1;
 		System.out.print("한 문자 입력 : ");
 		temp = (char)System.in.read();
@@ -10,11 +10,17 @@ public class Test001
 		temp1 = (temp >= 65 && temp <= 90) ? (char)(temp+32) : ((temp >= 97 && temp <=122) ? (char)(temp-32): temp);
 	
 		System.out.println(temp+ "→" +temp1);
+		*/
+		
+		
+		System.out.println("Welcome to Java");
+		System.out.println("First Java Program");
 
-		
-		
-		//System.out.println("Welcome to Java");
-		//System.out.println("First Java Program");
+		char ch = 65;			//왜 자동형변환이 일어났을까?
+		System.out.println(ch);
+
+		//int n = 0.0;			//이건 안되는데
+		//System.out.println(n);
 	}
 }
 
