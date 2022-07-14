@@ -15,10 +15,43 @@
 //  >> 가장 큰 수 → 99
 //  계속하려면 아무 키나 누르세요...
 
+import java.util.Scanner;
 public class Test083
 {
 	public static void main(String[] args)
-	{
+	{	
+		//주요 변수 선언
+		int n, max=0;
+		Scanner sc = new Scanner(System.in);
+
+		//사용자로부터 입력 받아 올 것
+		System.out.print("입력할 데이터의 갯수 : ");
+		n = sc.nextInt();
 		
+		//사용자로부터 입력을 받아오는데 배열을 통해서 값을 저장
+		System.out.print("데이터 입력(공백 구분) : ");
+		int[] arr = new int[n];
+		for (int i=0; i<arr.length; i++)
+		{
+			arr[i] = sc.nextInt();
+
+			//저장할 값을 최대 값과 비교해가면서 클때마다 바꿔 줄 것
+			if (arr[i] > max)
+				max = arr[i];
+			else
+				max = max;
+		}
+		
+		//결과 출력
+		System.out.printf("가장 큰 수 : → %d%n", max);
+
 	}
 }
+
+//실행 결과
+/*
+입력할 데이터의 갯수 : 12
+데이터 입력(공백 구분) : 74 65 13 91 54 22 86 45 13 99 11 38
+가장 큰 수 : → 99
+계속하려면 아무 키나 누르십시오 . . .
+*/

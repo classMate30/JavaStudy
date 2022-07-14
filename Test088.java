@@ -67,6 +67,8 @@ public class Test088
 }
 
 /*
+		//보영님 방법
+		//신기함
 		int[][] arr = new int[5][5];
 		for (int i=0; i<arr.length; i++)
 		{

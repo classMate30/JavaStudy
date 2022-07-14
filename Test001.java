@@ -16,11 +16,29 @@ public class Test001
 		System.out.println("Welcome to Java");
 		System.out.println("First Java Program");
 
-		char ch = 65;			//왜 자동형변환이 일어났을까?
-		System.out.println(ch);
+		//char ch = 65;			//왜 자동형변환이 일어났을까?
+		//System.out.println(ch);
 
 		//int n = 0.0;			//이건 안되는데
 		//System.out.println(n);
+		int[][] arr= new int[4][5];
+		int n=0;
+		
+		for (int i=0; i<5; i++)
+		{
+			for (int j=0;j<4; j++)
+			{
+				n++;
+				arr[j][i] = n;
+			}
+		}
+
+		for (int i=0; i<arr.length; i++)
+		{
+			for (int j=0; j<arr[i].length; j++)
+				System.out.printf("%3d",arr[i][j]);
+			System.out.println();
+		}
 	}
 }
 
