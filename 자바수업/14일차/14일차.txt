@@ -41,10 +41,10 @@ void print(int a, int b)					← (default)
   (클래스/메소드/변수에 붙일 수 있음)
 
 지시자		클래스 내부 		동일 패키지			상속받은 클래스		이외의 영역
-private			O					  X							X					  X
-(default)		O					  O							X					  X							
-protected		O					  O							O					  X
-public			O					  O							O					  O
+private			O		  X					X		      X
+(default)		O		  O					X     		      X							
+protected		O		  O					O		      X
+public			O		  O					O		 O
 
 □proteceted 	/	default 		상속받은 클래스차이?
 아버지가 어느날 안방으로 불러서 우리 가족 대대로 물려온 가보가 액자 뒤 금고안에 있으니
@@ -89,7 +89,7 @@ class 이용자
 	main()
 	{
 		커피자판기 ob = new 커피자판기();
-		ob.물통 -= 300;				//직접 접근하는 것을 막아야함
+		ob.물통 -= 300;				        //직접 접근하는 것을 막아야함
 		ob.커피통 += 500;				//성악설, 맘대로 가져 갈 수 있음
 	
 	}

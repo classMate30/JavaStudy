@@ -90,7 +90,7 @@ public class Test088
 			{
 				System.out.printf("%3d",arr[i][j]);
 			}
-			System.out.println();
+			System.out.pr intln();
 		}
 
 */
