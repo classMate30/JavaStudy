@@ -7,9 +7,8 @@
 //	1. Record 클래스
 //	- 속성만 존재하는 클래스로 설계할 것~!!!
 
-
 // 학생 1명
-public class Record
+public class Record_1
 {
 	// 학생 한 명을 표현 할 수 있는 속성들로 구성~!!!		check~!!!
 	//String[] name;
@@ -24,6 +23,7 @@ public class Record
 	double avg;					//-- 평균
 
 	int rank;
+
 	//추가~!!
 	//int rank					//--석차
 }

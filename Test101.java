@@ -63,6 +63,11 @@
 public class Test101
 {
 	public static void main(String[] args)
-
+	{	
+		Sungjuk_1 sj = new Sungjuk_1();
+		sj.set();
+		sj.input();
+		sj.print();
+	}
 	
 }

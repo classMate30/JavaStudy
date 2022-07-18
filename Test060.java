@@ -55,13 +55,12 @@ public class Test060
 			System.out.println();		// 개행
 		}
 		System.out.println();
-		*/
-
+		
 		//③ (2)에서 처리한 결과를
 		//	 두 문단으로 반복하는 반복문 구성
 		//	 (check~!! 반복문에 (2)의 결과를 삽입)
 		//■■■■ Type A ■■■■
-		/*
+		*/
 		for (int h=0; h<=1; h++)			//문단 구성
 		{
 			for (int i=1; i<=9; i++)		// 웅		→ 곱해지는 수
@@ -74,7 +73,8 @@ public class Test060
 			}
 			System.out.println();
 		}
-		*/
+		
+		/*
 		char star='*';
 		for (int m=0; m<=1; m++)
 		{
@@ -87,6 +87,7 @@ public class Test060
 				System.out.println();
 			}
 		}
+		*/
 
 		//■■■■ Type B ■■■■
 		/*

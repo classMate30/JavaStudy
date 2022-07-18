@@ -22,14 +22,54 @@ import java.util.Scanner;
 
 public class Sungjuk
 {
-	int studentNum;
+	int stuNum;
+	Record[] recArr;
 	
-	Record[] rec1 = new Record();
 
 	void input()
 	{
 		Scanner sc = new Scanner(System.in);
+		do
+		{
+			System.out.print("학생 수 입력 [1~100]");
+			stuNum = sc.nextInt();
+		}
+		while (1>stuNum || stuNum >100);
 		
-
+		recArr = new Record[stuNum];
 	}
+
+	void score()
+	{
+		Scanner sc = new Scanner(System.in);
+		for (int i=0; i<stuNum; i++)
+		{
+			recArr[i] = new Record();
+			System.out.printf("%d번째 학생의 이름 입력 : ", i+1);
+			recArr[i].name = sc.next();
+			
+
+			System.out.print("국어 점수 : ");
+			recArr[i].score[0] = sc.nextInt();
+
+			System.out.print("영어 점수 : ");
+			recArr[i].score[1] = sc.nextInt();
+
+			System.out.print("수학 점수 : ");
+			recArr[i].score[2] = sc.nextInt();
+
+
+			recArr[i].tot = recArr[i].score[0] + recArr[i].score[1] + recArr[i].score[2];
+			recArr[i].avg = recArr[i].tot / 3.0;
+
+			System.out.println();
+		}
+	}
+
+	void write()
+	{
+		for (int i = 0; i < num; i++)
+			System.out.printf("%3s%4d%4d%4d%5d%8.2f%4d\n", recArr[i].name, recArr[i].score[0], recArr[i].score[1], recArr[i].score[2], recArr[i].tot, recArr[i].avg);
+	}
+	
 }

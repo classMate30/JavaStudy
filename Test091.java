@@ -42,7 +42,9 @@ public class Test091
 				n++;
 				arr[i][j] = n;						//1 2 3 .... 14 15 16
 				
-				arr[i][arr[i].length-1] += arr[i][j];
+				//arr[i][arr[i].length-1] += arr[i][j];
+				arr[i][4] += arr[i][j];
+
 				//arr[0][4] += arr[0][0]
 				//			+= arr[0][1]
 				//			+= arr[0][2]
@@ -53,7 +55,8 @@ public class Test091
 				//	  2
 				//	  3
 
-				arr[arr.length-1][j] += arr[i][j];
+				//arr[arr.length-1][j] += arr[i][j];
+				arr[4][j] += arr[i][j];
 				//arr[4][0] += arr[0][0]
 				//			+= arr[1][0]
 				//			+= arr[2][0]
@@ -67,7 +70,8 @@ public class Test091
 				arr[i][4] += arr[i][j];
 				arr[4][j] += arr[i][j];
 				*/
-				arr[arr.length-1][arr[i].length-1] += arr[i][j];
+				//arr[arr.length-1][arr[i].length-1] += arr[i][j];
+				arr[4][4] += arr[i][j];
 				//arr[4][4]	+= arr[0][0]
 				//			+= arr[0][1]
 				//			+= arr[0][2]

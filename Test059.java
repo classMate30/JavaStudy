@@ -40,8 +40,8 @@ public class Test059
 				System.out.println("j : "+j);
 				//System.out.printf("%d * %d = %d\n", i, j, i*j);
 			}
-			
+		System.out.println(i+ " "+j);			
 		}
-		System.out.println(i+ " "+j);
+
 	}
 }
