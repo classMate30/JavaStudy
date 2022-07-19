@@ -69,7 +69,6 @@ class RspGame
 	public void middleCalc()
 	{
 		String[] str = {"가위", "바위", "보"};
-
 		System.out.println();
 		System.out.println(" - 유저		:" +str[user-1]);
 		System.out.println(" - 컴퓨터	:" +str[com-1]);
