@@ -1,0 +1,38 @@
+선생님 자식클래스로써 부모와 자식의 정보를 둘다가진 ob1을 부모클래스로 격상시켜서 만든게 ob2니까 
+ob2에는 부모와 자식의 정보가 둘다 들어있으니까 자식클래스로의 다운도 가능하다는 말씀이신가요?
+
+
+YES
+
+
+부모 ob1 = new 부모();
+
+자식 ob2 = new 자식();
+
+
+class 클래스 extends 클래스
+{
+}
+
+class 클래스 extends 추상클래스
+{
+}
+
+class 클래스 implements 인터페이스, 인터페이스, 인터페이스
+{
+}
+
+
+interface 인터페이스 extends 인터페이스, 인터페이스, 인터페이스
+{
+}
+
+
+Test74,75,76 생성자
+Test100 static변수와 static메소드
+Test111 상속
+Test112 super
+Test114 메소드 오버라이딩
+Test115 추상 클래스
+Test116 업캐스팅, 다운캐스팅
+Test117 인터페이스  Test118

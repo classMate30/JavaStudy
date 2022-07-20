@@ -77,8 +77,8 @@ public class Test074
       //--==>> 에러 발생(컴파일 에러)
       //       cannot find synbol
 
-      // int num = nt1.getNum();
-      // System.out.println(num1);
+       //int num = nt1.getNum();
+       //System.out.println(num1);
       System.out.println(nt1.getNum());
       //--==>> 10
 
@@ -105,6 +105,7 @@ public class Test074
 
 	  nt2.num=200;
 	  System.out.println(testResult);
+	  System.out.println(nt2.num);
 
 
 		
