@@ -1,0 +1,2 @@
+arr[1] = new Rect()
+arr배열 1번방에 Rect객체를 담겠다
