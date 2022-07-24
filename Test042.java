@@ -74,7 +74,7 @@ public class Test042
 		switch(num)
 		{
 		case 51: result = "¡Ú¡Ú¡Ú"; break;
-		case 50: result = "¡Ú¡Ú";
+		case 50: result = "¡Ú¡Ú"; break;
 		case 49: result = "¡Ú";
 		}
 

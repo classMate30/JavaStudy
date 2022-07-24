@@ -104,12 +104,12 @@ class Rect112 extends SuperTest112
 {
 	private int w, h;
 	
-	public Rect112()
+	/*public Rect112()
 	{
 		// 자동으로 삽입
 		//super();
 	}
-
+	*/
 	public void calc(int w, int h)
 	{	
 		this.w = w;
@@ -167,9 +167,9 @@ public class Test112
 		//Rect112클래스(자식 클래스) 기반 인스턴스 생성
 		Rect112 ob1 = new Rect112();
 		//--==>>SuperTest112... 인자 없는 생성자
-+
+
 		//Circle112 클래스(자식 클래스) 기반 인스턴스 생성
-		//Circle112 ob2 = new Circle112();
+		//Circle112 ob2 = new Circle112();//"원"
 		//--==>> 에러 발생(컴파일 에러)
 		//--	현재 Circle112클래스에는
 		//		매개변수를 필요로 하는 사용자 정의 생성자가 만들어져 있으며
@@ -178,6 +178,7 @@ public class Test112
 		ob1.calc(10,5);
 		//--==>>	w : 10,h : 5
 		//			사각형 - 15.0
+		//ob2.calc(5);
 	
 
 	}
