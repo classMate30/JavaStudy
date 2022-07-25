@@ -139,6 +139,48 @@ public class Test137
 		//자동완성 기능에 뒤에 공백 trim으로 제거 가능
 		//       불타는 금요일 신나는 토요일       
 		// 가운데 제외 앞뒤 공백 trim으로 제거 가능
+		System.out.println("|" + s.replaceAll(" ", "") + "|");
+		//--==>>|사랑|
+
+		// "50"
+		int temp = Integer.parseInt("50");
+		System.out.printf("%d%n",temp);
+		//--==>>50
+
+		s = Integer.toString(30);
+		System.out.printf("%s%n", s);
+		//--==>>30
+		//오버라이딩 아니고 오버로딩임
+
+		//--==>>d.toString() : 10
 		
+		int n =2345678;
+		System.out.printf("%d", n);
+		System.out.format("%d", n);
+		//--==>>23456782345678
+		
+		System.out.println();
+
+		s = String.format("%d", n);  //문자열 형태를 반환하는 메소드
+		System.out.println(s);
+		//--==>>2345678
+
+		s = String.format("%,d", n);  //문자열 형태를 반환하는 메소드
+		System.out.println(s);
+		//--==>>2,345,678
+		//%뒤에 , 있으면 세자리마다 『,』찍어줌	
+		
+		String str = "기본,열정,배려";
+		String[] strArr = str.split(",");
+
+		String[] strArr2 = "기본,열정,배려".split(",");
+		
+		for (String strl : strArr2)			//타입 : 자료구조 
+			System.out.print(strl + " " );
+		System.out.println();
+		//--==>> 기본 열정 배려
+			
+
+
 	}
 }

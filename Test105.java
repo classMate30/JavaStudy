@@ -171,7 +171,7 @@ public class Test105
 			System.out.println();	//°³Çà
 		}	
 		System.out.println("============================");
-
+	
 		
 		
 	}
