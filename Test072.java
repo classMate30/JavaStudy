@@ -29,7 +29,7 @@ import java.io.IOException;
 class Hap 
 {
 	//주요 변수 선언
-	int n, i=1, s=0;
+	int n, i=1 , s=0;
 			//i는 while하려고 돌린 루프변수
 	//입력 받아올 메소드
 	void input() throws IOException
