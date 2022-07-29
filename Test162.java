@@ -77,6 +77,8 @@ public class Test162
 	public static void main(String[] args)
 	{
 		//벡터 자료구조 생성
+		Vector<Object>
+
 		Vector<MyData> v = new Vector<MyData>();		//MyData객체를 담아서 쓸거야
 
 		//벡터 자료구조 v에
@@ -144,7 +146,7 @@ public class Test162
 			System.out.print("이름 : " + name + " , 나이 : " +age +"\n");
 		}
 		*/
-		// ①
+		// ①		
 		
 		for (MyData obj : v)
 		{
@@ -185,6 +187,7 @@ public class Test162
 			System.out.printf("이름:%s, 나이:%d세%n",((MyData)temp).getName(), ((MyData)temp).getAge());
 													//-->>이게 MyData obj가 되는것
 		}
+
 		//--==>>이름:정영준, 나이:13세
 		//		이름:정미경, 나이:7세
 		//		이름:한은영, 나이:3세

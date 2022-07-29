@@ -481,6 +481,10 @@ public class Test163
 	{
 		System.out.println("프로그램 종료~!!!");
 		System.exit(-1);
+		//원격지에서 객체를 컨트롤하는 통신  RMI    →  PDA에서 활용 됐었음.....
+		//원격지에서 종료되는것을 확인하기 위해 정수형 넘기기 시작
+		//아무 문제없이 꺼졌을때 -1넘겨서 꺼지게 했었음
+		//지금은 상관없긴 함
 	}
 	
 
@@ -488,8 +492,6 @@ public class Test163
 	//main() 메소드				→	완성
 	public static void main(String[] args) throws IOException, NumberFormatException
 	{	
-
-
 		do
 		{
 			menuDisp();
