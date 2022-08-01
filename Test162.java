@@ -102,7 +102,7 @@ public class Test162
 		/*
 		MyData st1 = new MyData();
 		st1.setName("¡§øµ¡ÿ");
-		st1.setAge(13);
+		st1.setAge(13);1
 		v.add(st1);
 
 		MyData st2 = new MyData();
