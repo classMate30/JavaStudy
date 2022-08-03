@@ -232,6 +232,7 @@ public class Test163
 		sel = Integer.parseInt(br.readLine());
 		if (sel<1 || sel>6)
 		{
+
 			exit();
 		}
 		
@@ -273,7 +274,7 @@ public class Test163
 		case Menus.E_FIND: findElement();break;
 		case Menus.E_DEL: delElement();break;
 		case Menus.E_CHA:chaElement();break;
-		case Menus.E_EXIT:exit();break;
+		//case Menus.E_EXIT:exit();break;
 		
 		}
 
