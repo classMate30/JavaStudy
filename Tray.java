@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Machine
+public class Tray
 {
 	private String name;
 	private int price;
@@ -13,7 +13,7 @@ public class Machine
 		
 		while(flag)
 		{
-			System.out.print("①:10000원 ②:5000원 ③:1000원 ④:500원 ⑤:500원 ⑥100원");
+			System.out.print("①:10000원 ②:5000원 ③:1000원 ④:500원 ⑤:500원");
 			coin = sc.nextInt();
 
 			switch (coin)
@@ -41,7 +41,7 @@ public class Machine
 
 	public static void main(String[] args)
 	{
-		Machine mc = new Machine();
+		Tray mc = new Tray();
 		mc.insert_coin();
 	}
 }

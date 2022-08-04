@@ -33,10 +33,15 @@ public class UserMenu implements Menu {
                 System.out.print("원하는 상품을 선택하세요 :) ");
                 int itemId = scanner.nextInt();
                 String item = machine.getItem(itemId).name;
-                machine.buy(itemId);
-                System.out.println(item + "을 구입했습니다.");
-                report.write(item);
-                System.out.println("더 구매하시겠습니까? (Y/N) ");
+                boolean valid = machine.buy(itemId);
+                if(valid){
+                    System.out.println(item + "을 구입했습니다.");
+                    report.write(item);
+                    System.out.println("더 구매하시겠습니까? (Y/N) ");
+                }else {
+                    System.out.println("재고가 부족합니다");
+                    System.out.println("다른 상품을 구매하시겠습니까? (Y/N) ");
+                }
                 switch (scanner.next()) {
                     case "Y":case "y":break;
                     case "N":case "n":System.out.println("거스름돈 " + machine.getMoney() + "원을 가져가세요 :) ");

@@ -6,8 +6,8 @@ public class ThirdTeam
 		AdminMode am = new AdminMode();
 		do
 		{
-			am.adminDisp();
-			am.adminSelect();
+			am.display();
+			am.select();
 		}
 		while (true);
 

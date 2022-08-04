@@ -20,7 +20,7 @@ public class Machine {
 
         report = new Report();
 
-        stocks = new HashMap<Item, Integer>();
+        stocks = new HashMap<Item, Integer>();		//처음부터 10개로 초기화 시켜준것 초기화 작업
         for (Item item : items) {
             stocks.put(item, capacity);
         }
@@ -53,24 +53,27 @@ public class Machine {
             return it;	
     }
 
-    public void fill(Item item, int amount) {
+    public void fill(Item item, int amount) {			//물건 떨어졌을때 재고 추가시 추가하는 메소드
         int remains = stocks.get(item);
         stocks.put(item, remains + amount);
     }
 
-    public void buy(int itemId) {
+    public boolean buy(int itemId) {					
         for (Item item : items) {
             if (item.itemId == itemId) {
                 Item it = item;
                 int remains = stocks.get(it);
                 if (remains == 0) {
                     System.out.println("Sold Out!!");
+                    return false;
                 } else {
                     stocks.put(it, remains - 1);
                     money -= it.price;
+                    return true;
                 }
             }
         }
+    return false ;
     }
 
     public List<Item> getItems() {
