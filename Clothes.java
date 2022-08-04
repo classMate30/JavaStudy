@@ -36,7 +36,7 @@ public class Clothes implements Items
 		{
 			this.size[1] = this.getSize(1)-1;
 		}
-		else if (s=="L"||s=="l")
+		else if (s.equals("L")||s.equals("l"))
 		{
 			this.size[2] = this.getSize(2)-1;
 		}

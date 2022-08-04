@@ -12,5 +12,4 @@ public class ThirdTeam
 		while (true);
 
 	}
-
 }

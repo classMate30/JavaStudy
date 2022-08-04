@@ -8,9 +8,11 @@ public class AdminMode implements Mode
 	public static Integer sel;
 	VendingMachine vendingmachine = new VendingMachine();
 	UserMode user = new UserMode(vendingmachine);
-
-	static
+	
+	//static
+	public AdminMode()
 	{ 	
+		this.vendingmachine = vendingmachine;
 		br = new BufferedReader(new InputStreamReader(System.in));
 	}
 	
@@ -36,7 +38,6 @@ public class AdminMode implements Mode
 		sel = Integer.parseInt(br.readLine());
 		if (sel<1 || sel>6)
 		{
-
 			System.out.println("잘못 입력 하셨습니다");
 			System.out.println("다시 입력 해주십시오");
 			System.out.println();
@@ -79,7 +80,7 @@ public class AdminMode implements Mode
 		}
 		else if (sel==6)
 		{
-		exit();
+			exit();
 		}
 	}
 

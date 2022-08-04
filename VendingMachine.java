@@ -10,24 +10,28 @@ public class VendingMachine
 	private List<Items> items ;
 	private int maximum = 5;
 	private int money;
-	private int[] size = {5,5,5};
+	private int[] size;
 	
+
+
+	//밴딩 머신에서 재고 관리 및 돈 관리 ??????????????
+
 	//System.out.println("S" + size[0]);
 
 	public VendingMachine()
 	{
 		//List 인덱스로 이것들을 접근할 수 있게 됨
 		items = new ArrayList<>();		//선언 이유
-		items.add(new Clothes(1, "민소매", 5000, size));
-		items.add(new Clothes(2, "반팔", 15000, size));
-		items.add(new Clothes(3, "코트", 50000, size));
-		items.add(new Clothes(4, "패딩", 100000, size));
-		items.add(new Clothes(5, "히트텍상의", 10000, size));
-		items.add(new Clothes(6, "반바지", 15000, size));
-		items.add(new Clothes(7, "긴바지", 20000, size));
-		items.add(new Clothes(8, "기모바지", 30000, size));
-		items.add(new Clothes(9, "냉장고바지", 10000, size));
-		items.add(new Clothes(10, "히트텍하의", 10000, size));
+		items.add(new Clothes(1, "민소매", 5000, new int[]{5,5,5}));
+		items.add(new Clothes(2, "반팔", 15000, new int[]{5,5,5}));
+		items.add(new Clothes(3, "코트", 50000, new int[]{5,5,5}));
+		items.add(new Clothes(4, "패딩", 100000, new int[]{5,5,5}));
+		items.add(new Clothes(5, "히트텍상의", 10000, new int[]{5,5,5}));
+		items.add(new Clothes(6, "반바지", 15000, new int[]{5,5,5}));
+		items.add(new Clothes(7, "긴바지", 20000, new int[]{5,5,5}));
+		items.add(new Clothes(8, "기모바지", 30000, new int[]{5,5,5}));
+		items.add(new Clothes(9, "냉장고바지", 10000, new int[]{5,5,5}));
+		items.add(new Clothes(10, "히트텍하의", 10000, new int[]{5,5,5}));
 		items.add(new Accessories(11, "우산", 3000,maximum));
 		items.add(new Accessories(12, "모자", 15000,maximum));
 		items.add(new Accessories(13, "목도리", 15000,maximum));
