@@ -4,12 +4,12 @@ public class Sales
 	List<Items> items;			
 	int[] countItemList = new int[15];
 	
-	public Sales(List<Items> items)	//List자료구조의 Items를 받아옴				//날라오는 Items가 List라는 뜻
+	public Sales(List<Items> items)					//List자료구조의 Items를 받아옴
 	{
 		this.items = items;
 	}
 
-	public int getsumAll()
+	public int getsumAll()							//매출 합을 구하기 위한 함수 정의
 	{	
 		int sumAll=0;
 
@@ -23,12 +23,12 @@ public class Sales
 	}
 	
 
-	public void countId(int itemId)
+	public void countId(int itemId)					//물건이 하나 팔릴떄마다 생성된 리스트에 하나씩 찍어줄 것
 	{
 		countItemList[itemId] += 1;
 	}
 	
-	public void ranking()						//상품 판매 랭킹을 매길 것
+	public void ranking()							//상품 판매 랭킹을 매길 것
 	{	
 		int max=0;
 

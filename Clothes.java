@@ -6,7 +6,6 @@ public class Clothes implements Items //상/하의
 	String name;
 	int[] size;
 	int price;
-	long date;
 	Scanner sc = new Scanner(System.in);
 
 	public Clothes(int itemId, String name, int price, int[] size) {
@@ -14,7 +13,6 @@ public class Clothes implements Items //상/하의
 		this.name = name;
         this.price = price;
 		this.size = size;
-        this.date = System.currentTimeMillis();
 	} //생성자
 	public String getName(){return this.name;};		//Name을 리턴 하는 함수
 	public int getPrice(){return this.price;};		//Price를 리턴 하는 함수
