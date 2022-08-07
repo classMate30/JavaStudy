@@ -44,7 +44,6 @@ public class Machine {
             if (item.itemId == itemId) {
                 it = item;
             }
-        
 		}
         if (it == null) {
             System.out.println("찾으시는 상품이 없습니다.");

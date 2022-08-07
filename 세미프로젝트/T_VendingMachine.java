@@ -18,8 +18,6 @@ public class VendingMachine
 	//"총 금액이 얼마인게 맞습니까 ?" profit 
 	//밴딩 머신에서 재고 관리 및 돈 관리 ??????????????
 	//System.out.println("S" + size[0]);
-	
-	//핵심
 	public VendingMachine()
 	{	
 		//List 인덱스로 이것들을 접근할 수 있게 됨
@@ -35,7 +33,7 @@ public class VendingMachine
 		items.add(new Clothes(9, "냉장고바지", 10000, new int[]{5,5,5}));
 		items.add(new Clothes(10, "히트텍하의", 10000, new int[]{5,5,5}));
 		items.add(new Accessories(11, "우산", 3000,amount));
-		items.add(new Accessories(12, "손풍기", 15000,amount));
+		items.add(new Accessories(12, "모자", 15000,amount));
 		items.add(new Accessories(13, "목도리", 15000,amount));
 		items.add(new Accessories(14, "장갑", 10000,amount));
 		items.add(new Accessories(15, "선글라스", 30000,amount));

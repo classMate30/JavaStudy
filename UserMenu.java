@@ -49,8 +49,7 @@ public class UserMenu implements Menu {
                         isEnd = true;
                         break;
                     default:
-                        System.out.println("잘못된 입력.. 처음으로 이동합니다.");
-                }
+                        System.out.println("잘못된 입력.. 처음으로 이동합니다.");}
             } else {
                 continue;
             }

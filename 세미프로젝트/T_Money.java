@@ -1,4 +1,4 @@
-public class Money
+class Money
 {
     int buttonNumber;
     int value;
