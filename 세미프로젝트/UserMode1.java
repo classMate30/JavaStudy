@@ -11,7 +11,8 @@ public class UserMode implements Mode
 	Scanner sc = new Scanner(System.in);
 	int coin = 0;
 	int remain = 0;
-	RpsGame ob;
+	RpsGame ob ;
+
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	public UserMode(VendingMachine vendingmachine) { // 살아있는 객체를 컨트롤 하기위해 넘겨주고 받고 함
 		machine = vendingmachine;		//this.machine=vendingmachine; items = this.machine.getItems();
@@ -100,9 +101,10 @@ public class UserMode implements Mode
 		System.out.println();
 		System.out.println("==============================================================================================================================");
 	}	//메뉴판을 보여줘야 한다
-	public boolean select() throws IOException, NumberFormatException {
+	public boolean select() throws IOException {
+		ob = new RpsGame(this.machine.getSales());
 		int itemId;
-		boolean flag = true;
+		boolean flag = true;	
 		do {
 			System.out.print("무엇을 구매하시겠습니까?");
 			String check = sc.next();
@@ -121,48 +123,84 @@ public class UserMode implements Mode
 					System.out.println("금액이 부족합니다. 금액을 더 투입해주세요.");
 					coin += machine.getInsert();
 				}
-				//this.machine.buy(itemId - 1);
-				//this.machine.setTotal(this.machine.getItemIdPrice(itemId-1));	// 
-				//this.machine.getSales().countId(itemId-1);						//랭킹  
+				/*
+				this.machine.buy(itemId - 1);
+				this.machine.setTotal(this.machine.getItemIdPrice(itemId-1));	// 
+				this.machine.getSales().countId(itemId-1);						//랭킹  
+				*/
 				//시도
 				//int a = items.get(itemId).getAmount();
-				machine.buy(itemId - 1);
-				machine.setTotal(this.machine.getItemIdPrice(itemId-1));
-				machine.getSales().countId(itemId-1);
-				
+				//machine.buy(itemId - 1);
+				//machine.setTotal(this.machine.getItemIdPrice(itemId-1));
+				//machine.getSales().countId(itemId-1);
+				//this.machine.buy(itemId - 1);
 				System.out.println();
 				System.out.print("추가 구매 하시겠습니까? (Y/N) : ");
 				String check2 = sc.next();
 				if (check2.equals("N") || check2.equals("n")) {
-					remain += receipt();
-					if(remain > 0){
-						display();
+					
+				//remain += receipt();
+					String user ;
+			
+					System.out.printf(">>> 고객님이 구매하신 상품의 총 금액은 %d원 입니다.", machine.getItemIdPrice(itemId-1));
+				// 누적 금액 해결하기1
+					System.out.println();
+					System.out.print("결제 하시겠습니까? (Y/N) : ");
+			
+					user = sc.next();
+					if (user.equals("y") || user.equals("Y"))
+					{
+						machine.buy(itemId - 1);
+						machine.setTotal(this.machine.getItemIdPrice(itemId-1));
+						machine.getSales().countId(itemId-1);
+						int discount = 0;
+						boolean start = ob.gameStart(machine.totalReturn());		// 일정 매출 달성 시 이벤트 출력
+						if (start)
+						{
+						ob.input();
+						ob.middleCalc();
+						discount = ob.resultCalc();
+						}
+
+					System.out.printf("최종 결제 금액은 : %d원 입니다.\n",machine.totalReturn()-discount);
+					remain = machine.pay(machine.totalReturn()-discount);
+					machine.returnRemainMoney(remain);
+					System.out.print("이전화면으로 돌아가려면 아무키나 입력하세요.......");
+					String anykey = br.readLine();
+					return false;
 					}
-					else{
+					else if (user.equals("n") || user.equals("N"))
+					{
+					remain += machine.totalReturn();
+					System.out.print("이전화면으로 돌아가려면 아무키나 입력하세요.......");
+					String anykey = br.readLine();
+					return true;
+					}
+					if(remain > 0){	
+						display();
+					}else{
 						flag = false;
 					}
-				} 
-				else
-				{
+				} else {
 					flag = true;
 				}
-			} 
-			else
-			{
+			} else {
 				System.out.println("잘못 입력하셨습니다. 다시 입력해주세요");
 			}
 		}while (flag) ;
 		return true;
-	}  //입력을 받고 입력에 따른 내부적으로 기능 호출
-
+	} 
+}
+//입력을 받고 입력에 따른 내부적으로 기능 호출
+/*
 	public int receipt() throws IOException{
-		ob = new RpsGame(this.machine.getSales());
+		//ob = new RpsGame(this.machine.getSales());
 		while (true)
 			{
 			String user ;
 			
 			System.out.printf(">>> 고객님이 구매하신 상품의 총 금액은 %d원 입니다.", machine.totalReturn());
-			// 누적 금액 해결하기	
+			// 누적 금액 해결하기
 			System.out.println();
 			System.out.print("결제 하시겠습니까? (Y/N) : ");
 			
@@ -200,3 +238,4 @@ public class UserMode implements Mode
 }
 	
 
+*/

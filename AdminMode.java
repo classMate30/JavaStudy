@@ -46,7 +46,7 @@ public class AdminMode implements Mode
 		else if (sel==1)
 		{ //재고 관련 기능
 			user.display();
-			this.stockUp();
+			stockUp();
 		}
 		//1. (재고 클래스에서 재고 관련 기능 호출)
 		//①관리자모드에서 재고를 추가하고 갈필요 없이 처음 세팅 값을 주고 시작한다.
@@ -71,7 +71,7 @@ public class AdminMode implements Mode
 		{
 			//4. (화폐 수량 보여주는 기능 호출)
 			vendingmachine.moneyinsert.Display();
-			System.out.print("이전화면으로 돌아가려면 아무키나 입력하세요.......");
+			System.out.print	("이전화면으로 돌아가려면 아무키나 입력하세요.......");
 			String anyKey = br.readLine();
 		}
 		//4. (잔돈 클래스에서 화폐 수량과 관련된 기능 호출)
@@ -92,7 +92,7 @@ public class AdminMode implements Mode
 			exit();
 		}
 		//6.  시스템 종료(System.exit(-1);)
-		return true;
+		return true;	
 	}
 	public void stockUp() throws IOException 
 	{

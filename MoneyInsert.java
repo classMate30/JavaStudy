@@ -23,22 +23,21 @@ public class MoneyInsert {
 		boolean flag = true;
 
 		while (flag) {
-			System.out.println("현금을 투입하세요. : ");
+			System.out.print("현금을 투입하세요. : ");
 			System.out.println("①:50000원 ②:10000원 ③:5000원 ④:1000원 ⑤:500원 ⑥:100원 ");
 			coin = sc.nextInt();
 			money_list.get(coin - 1).setAmount(1); // 자판기 보유 화폐 증가
 			int now_coin = money_list.get(coin - 1).getValue();
-			sum_coin += now_coin;
+			sum_coin += now_coin;	
 			System.out.println("현재투입된 금액은 : " + sum_coin);
 			
-			System.out.println("더 넣으시겠습니까? : Y/N ");
+			System.out.print("더 넣으시겠습니까? : Y/N ");
 			String check = sc.next() ;
 			if (check.equals("N") || check.equals("n") ) {
 				flag = false;
-
 			}
 		}
-	//	System.out.println("현재투입된 금액은 : " + sum_coin);	  //22.08.07 15:57분 수정 오류시 돌아올 것
+	//	System.out.println("현재투입된 금액은 : " + sum_coin);	  //22.08.07 15:57분 수정 
 		return sum_coin ;
 	}
 

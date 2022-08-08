@@ -8,7 +8,7 @@ public class RpsGame
 	private int user;
 	private int admin = 0;
 	private int price = 0;
-	int i = 0;
+	//int i = 0;
 	public RpsGame(Sales sales)
 	{
 		this.sales = sales;
@@ -20,12 +20,13 @@ public class RpsGame
 		int total = price + sales.getsumAll(); //+ 현재 매출 sales.getsumAll()
 		//while (true)
 		//{
-			if (total > 70000*i)	
+			if (price >= 70000)	
+			//
 			{
 				
-			System.out.println("■■■ 일정 매출액 달성 시 참여 가능한 이벤트~!! ■■■");
+			System.out.println("■■■ 7만원 이상 구매시 참여 가능한 이벤트~!! ■■■");
 			System.out.println();
-			i++;
+			//i++;
 			return true;
 			//break;
 			}

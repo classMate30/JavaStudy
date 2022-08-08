@@ -29,4 +29,5 @@ public class Accessories implements Items //잡화
 			}
 	
 	} //Amount를 설정 하는 함수(-1 해줌)
+	public void setAmount(String s){}
 }

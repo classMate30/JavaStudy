@@ -43,34 +43,34 @@ public class VendingMachine
 		sales = new Sales(items);
 	}
 	public List<Items> getItems() {return this.items;}
-	public boolean buy(int itemId) {
+	public boolean buy(int itemId) {							//물건을 사옴(상하의 / 잡화에서 호출하는게 다름)
 		// 돈 체크 부터
-		this.items.get(itemId).setAmount();
+		items.get(itemId).setAmount();
 		return true ;
 	}
-	public int pay(int totalprice) {
+	public int pay(int totalprice) {							//현재 금액에서 받아온 돈을 뺀다음에 남은 것 리턴	
 		// 돈 체크 부터
-		int remain = this.moneyinsert.setSum_coin(totalprice);
+		int remain = moneyinsert.setSum_coin(totalprice);
 		
 		return remain;
 	}
 
 	public boolean stock(int itemId){
-		this.items.get(itemId).fill();
+		items.get(itemId).fill();
 		return true ;
 	}
-	public int getItemIdPrice(int itemId){
-		return this.items.get(itemId).getPrice();
+	public int getItemIdPrice(int itemId){					//해당 물건 가격 띄워주는 기능
+		return items.get(itemId).getPrice();
 	}
-	public int getInsert(){
+	public int getInsert(){				
 		int coin = moneyinsert.insert_coin();
 		return coin ;
 	}
-	public int totalReturn(){return total;}
-	public void setTotal(int price){total += price ;}
+	public int totalReturn(){return total;}					//합계 리턴
+	public void setTotal(int price){total += price ;}		//돈 추가 기능
 
 	public String getName(int itemId){
-		return this.items.get(itemId).getName();
+		return items.get(itemId).getName();
 	}
 
 	public Sales getSales()
@@ -78,7 +78,7 @@ public class VendingMachine
 		return this.sales;
 	}
 	
-	public void returnRemainMoney(int remain)
+	public void returnRemainMoney(int remain)				//거스름돈 뱉은 다음 0으로 초기화
 	{
 		moneyinsert.returnMoney(remain);
 		total = 0;

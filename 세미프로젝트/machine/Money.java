@@ -11,9 +11,6 @@ class Money
 
     }
     public int getValue(){return value ;}
-    public int getButtonNumber() {return buttonNumber;}
     public int getAmount() {return amount;}
-    public void setButtonNumber(int buttonNumber) {this.buttonNumber = buttonNumber;}
-    public void setValue(int value) {this.value = value;}
     public void setAmount(int amount) {this.amount += amount;}
 }

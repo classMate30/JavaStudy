@@ -7,17 +7,11 @@ import java.util.Scanner;
 
 public class VendingMachine
 {
-	public MoneyInsert moneyinsert;
 	//주요 변수들 선언
 	private List<Items> items ;
-	private int amount = 5;
-	private int total = 0;
+	private MoneyInsert moneyinsert;
 	private Sales sales;
 
-	//금액 집어넣기 실행 테스트
-	//"총 금액이 얼마인게 맞습니까 ?" profit 
-	//밴딩 머신에서 재고 관리 및 돈 관리 ??????????????
-	//System.out.println("S" + size[0]);
 	public VendingMachine()
 	{	
 		//List 인덱스로 이것들을 접근할 수 있게 됨
@@ -32,53 +26,54 @@ public class VendingMachine
 		items.add(new Clothes(8, "기모바지", 30000, new int[]{5,5,5}));
 		items.add(new Clothes(9, "냉장고바지", 10000, new int[]{5,5,5}));
 		items.add(new Clothes(10, "히트텍하의", 10000, new int[]{5,5,5}));
-		items.add(new Accessories(11, "우산", 3000,amount));
-		items.add(new Accessories(12, "모자", 15000,amount));
-		items.add(new Accessories(13, "목도리", 15000,amount));
-		items.add(new Accessories(14, "장갑", 10000,amount));
-		items.add(new Accessories(15, "선글라스", 30000,amount));
+		items.add(new Accessories(11, "우산", 3000,5));
+		items.add(new Accessories(12, "모자", 15000,5));
+		items.add(new Accessories(13, "목도리", 15000,5));
+		items.add(new Accessories(14, "장갑", 10000,5));
+		items.add(new Accessories(15, "선글라스", 30000,5));
 		moneyinsert  = new MoneyInsert() ;
 		sales = new Sales(items);
 	}
+	public void getRanking() {
+		sales.ranking();
+	}
+	public void moneyDisplay() {
+		moneyinsert.Display();
+	}
+	public int getSalesAll() {
+		return sales.getsumAll();
+	}
+	public void ItemsDisplay() {
+		for(Items item : items){
+			System.out.println(item);
+		}
+	}
 	public List<Items> getItems() {return this.items;}
-	public boolean buy(int itemId) {
-		// 돈 체크 부터
-		this.items.get(itemId).setAmount();
-		return true ;
-	}
-	public int pay(int totalprice) {
-		// 돈 체크 부터
-		int remain = this.moneyinsert.setSum_coin(totalprice);
-		
-		return remain;
-	}
-
-	public boolean stock(int itemId){
-		this.items.get(itemId).fill();
-		return true ;
-	}
-	public int getItemIdPrice(int itemId){
-		return this.items.get(itemId).getPrice();
+	public Sales getSales()
+	{
+		return this.sales;
 	}
 	public int getInsert(){
 		int coin = moneyinsert.insert_coin();
 		return coin ;
 	}
-	public int totalReturn(){return total;}
-	public void setTotal(int price){total += price ;}
-
-	public String getName(int itemId){
-		return this.items.get(itemId).getName();
-	}
-
-	public Sales getSales()
-	{
-		return this.sales;
-	}
-	
 	public void returnRemainMoney(int remain)
 	{
 		moneyinsert.returnMoney(remain);
-		total = 0;
+	}
+	public void stockUp(int itemId) {
+		if (itemId >= 0 && itemId < 15)
+		{
+			items.get(itemId).fill();
+			System.out.println(items.get(itemId).getName() + " 이(가) 5개 추가되었습니다.");
+		}
+		else
+		{
+			System.out.print("잘못 입력하셨습니다.");
+		}
+	}
+	public boolean buy(int itemId) {
+		boolean result = items.get(itemId).setAmount();
+		return result ;
 	}
 }

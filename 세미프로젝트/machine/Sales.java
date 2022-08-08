@@ -21,11 +21,10 @@ public class Sales
 		}
 		return sumAll;
 	}
-	
-
 	public void countId(int itemId)
 	{
 		countItemList[itemId] += 1;
+
 	}
 
 	public void ranking()

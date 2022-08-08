@@ -4,8 +4,8 @@ public class Clothes implements Items //ªÛ/«œ¿«
 {	
 	int itemId;
 	String name;
-	int[] size;
 	int price;
+	int[] size;
 	Scanner sc = new Scanner(System.in);
 
 	public Clothes(int itemId, String name, int price, int[] size) {
