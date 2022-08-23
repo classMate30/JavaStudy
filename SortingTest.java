@@ -20,13 +20,22 @@ public class SortingTest
 //두번째에서 부터 보기 시작해서 거꾸로 확인
 		for (int i=1; i<arr.length; i++)
 		{
-			for (int j=i; j<=0; j--)
+			int j;
+			int tmp = arr[i];
+			for (j=i; j>0 && arr[j-1] > tmp; j--)
 			{
-				if ()
-				{
-				}
+				arr[j] = arr[j-1];
 			}
+			arr[j] = tmp;
 		}
+
+		for (int a : arr)
+		{
+			System.out.print(a + " ");
+		}
+	}
+}
+
 
 		
 /*

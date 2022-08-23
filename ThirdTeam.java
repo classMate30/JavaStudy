@@ -17,8 +17,3 @@ public class ThirdTeam
 }
 
 
-	/*
-        at UserMode.select(UserMode.java:112)
-        at AdminMode.select(AdminMode.java:83)
-        at ThirdTeam.main(ThirdTeam.java:12)
-	*/

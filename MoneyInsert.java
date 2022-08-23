@@ -23,6 +23,7 @@ public class MoneyInsert {
 		boolean flag = true;
 
 		while (flag) {
+<<<<<<< Updated upstream
 			System.out.print("현금을 투입하세요. : ");
 			System.out.println("①:50000원 ②:10000원 ③:5000원 ④:1000원 ⑤:500원 ⑥:100원 ");
 			coin = sc.nextInt();
@@ -32,6 +33,17 @@ public class MoneyInsert {
 			System.out.println("현재투입된 금액은 : " + sum_coin);
 			
 			System.out.print("더 넣으시겠습니까? : Y/N ");
+=======
+			System.out.println("현금을 투입하세요. : ");
+			System.out.println("①:50,000원 ②:10,000원 ③:5,000원 ④:1,000원 ⑤:500원 ⑥:100원 ");
+			coin = sc.nextInt();
+			money_list.get(coin - 1).setAmount(1); // 자판기 보유 화폐 증가
+			int now_coin = money_list.get(coin - 1).getValue();
+			sum_coin += now_coin;
+			System.out.printf("현재투입된 금액은 : %,d원%n", sum_coin);
+			
+			System.out.println("더 넣으시겠습니까?(Y/N): ");
+>>>>>>> Stashed changes
 			String check = sc.next() ;
 			if (check.equals("N") || check.equals("n") ) {
 				flag = false;
@@ -56,7 +68,7 @@ public class MoneyInsert {
 		System.out.println(" 현금 단위      현금 수량");
 		System.out.println("===================================================");
 		for (Money money : money_list)
-			System.out.printf(" %-5d (원)      %2d\n",money.getValue(),money.getAmount());
+			System.out.printf(" %,6d (원)      %2d\n",money.getValue(),money.getAmount());
 		System.out.println("===================================================");
 	}
 
@@ -83,7 +95,7 @@ public class MoneyInsert {
 		money_list.get(3).setAmount(-_1000won);
 		money_list.get(4).setAmount(-_500won);
 		money_list.get(5).setAmount(-_100won);
-		System.out.println(sum_coin + "원 을 반환합니다");
+		System.out.printf("%,d원 을 반환합니다%n", sum_coin);
 		System.out.println();
 		System.out.println("이용해 주셔서 감사합니다.");
 		System.out.println();

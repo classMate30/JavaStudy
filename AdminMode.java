@@ -56,7 +56,7 @@ public class AdminMode implements Mode
 		{
 			///2. (매출 관련 기능 호출)
 			int salesAll = vendingmachine.getSales().getsumAll();
-			System.out.println("현재 총 매출액은 " + salesAll + "원 입니다");
+			System.out.printf("현재 총 매출액은 %,d원 입니다%n", salesAll);
 			System.out.print("이전화면으로 돌아가려면 아무키나 입력하세요.......");
 			String anyKey = br.readLine();
 		}

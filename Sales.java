@@ -15,8 +15,8 @@ public class Sales
 
 		for (int i=0; i<countItemList.length; i++)
 		{
-			int cnt = countItemList[i];
-			sumAll += cnt * items.get(i).getPrice();
+			int count = countItemList[i];
+			sumAll += count * items.get(i).getPrice();
 			
 		}
 		return sumAll;
@@ -27,7 +27,59 @@ public class Sales
 	{
 		countItemList[itemId] += 1;
 	}
+
 	
+public void ranking()								 //상품 판매 랭킹을 매길 것
+   {   
+      int max = 0;
+
+      for (int i = 0; i<countItemList.length; i++)
+      {
+         if (max < countItemList[i])
+         {
+            max = countItemList[i];
+         }   
+      }
+      for (int j = 0; j<countItemList.length; j++)
+      {
+         if (max == 0)
+         {
+            System.out.printf("현재 팔린 상품이 없습니다.%n");
+            break;
+         }
+         else if (max == countItemList[j])
+         {   
+            if (j>= 0 && j<= 10)
+            {
+            System.out.printf("현재 1위는 %s 입니다 %n", items.get(j).getName());
+            }
+         }
+      }
+   }
+
+}
+
+
+/*
+		for (int i=0; i<countItemList.length; i++)		
+		{
+			for (int j=0; j<countItemList.length; j++)	
+			{
+				if (countItemList[i] > countItemList[j])
+				{
+			
+					countItemList[j]++;
+				}	
+				
+				else if(countItemList[i] > countItemList[j]) 
+				{
+					countItemList[i]++;
+				}
+			}
+			
+*/
+
+	/*
 	public void ranking()							//상품 판매 랭킹을 매길 것
 	{	
 		int max=0;
@@ -49,29 +101,4 @@ public class Sales
 		}
 
 	}
-
-	
-
-
-}
-
-
-/*
-		for (int i=0; i<countItemList.length; i++)		
-		{
-			for (int j=0; j<countItemList.length; j++)	
-			{
-				if (countItemList[i] > countItemList[j])
-				{
-			
-					countItemList[j]++;
-				}	
-				
-				else if(countItemList[i] > countItemList[j]) 
-				{
-					countItemList[i]++;
-				}
-			}
-		System.out.printf("현재 %d 위는 %s 입니다%n",(i+1) ,items.get(i).getName());
-		
-*/
+	*/

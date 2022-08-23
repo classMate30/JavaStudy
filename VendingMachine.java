@@ -55,6 +55,7 @@ public class VendingMachine
 		return remain;
 	}
 
+<<<<<<< Updated upstream
 	public boolean stock(int itemId){
 		items.get(itemId).fill();
 		return true ;
@@ -68,6 +69,21 @@ public class VendingMachine
 	}
 	public int totalReturn(){return total;}					//합계 리턴
 	public void setTotal(int price){total += price ;}		//돈 추가 기능
+=======
+	public boolean stock(int itemId){							//
+		this.items.get(itemId).fill();
+		return true ;
+	}
+	public int getItemIdPrice(int itemId){						//해당 물건 가격 띄워주는 기능				
+		return this.items.get(itemId).getPrice();
+	}			
+	public int getInsert(){
+		int coin = moneyinsert.insert_coin();
+		return coin ;
+	}
+	public int totalReturn(){return total;}						//합계 리턴 기능
+	public void setTotal(int price){total += price ;}			//돈 추가 기능
+>>>>>>> Stashed changes
 
 	public String getName(int itemId){
 		return items.get(itemId).getName();
